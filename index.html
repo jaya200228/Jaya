@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Frontend Developer Portfolio - Jayachandra</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Hide the real file input but keep accessible */
+    #photo-upload {
+      display: none;
+    }
+
+    /* Cursor pointer on profile image */
+    .clickable-profile-image {
+      cursor: pointer;
+      transition: box-shadow 0.3s ease;
+      user-select: none;
+    }
+    .clickable-profile-image:hover {
+      box-shadow: 0 0 8px 2px rgb(99 102 241 / 0.6);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+  <header class="bg-white shadow-md fixed w-full z-20">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6 max-w-4xl">
+      <a href="#home" class="text-2xl font-bold text-indigo-600 hover:text-indigo-700">Jayachandra</a>
+      <nav class="space-x-6 text-gray-600 font-medium hidden md:block">
+        <a href="#about" class="hover:text-indigo-600 transition">About</a>
+        <a href="#skills" class="hover:text-indigo-600 transition">Skills</a>
+        <a href="#education" class="hover:text-indigo-600 transition">Education</a>
+        <a href="#certifications" class="hover:text-indigo-600 transition">Certifications</a>
+        <a href="#projects" class="hover:text-indigo-600 transition">Projects</a>
+        <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Toggle menu">
+        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden bg-white shadow-md md:hidden px-6 pb-4">
+      <a href="#about" class="block py-2 text-indigo-600 font-semibold border-b border-gray-200">About</a>
+      <a href="#skills" class="block py-2 border-b border-gray-200">Skills</a>
+      <a href="#education" class="block py-2 border-b border-gray-200">Education</a>
+      <a href="#certifications" class="block py-2 border-b border-gray-200">Certifications</a>
+      <a href="#projects" class="block py-2 border-b border-gray-200">Projects</a>
+      <a href="#contact" class="block py-2">Contact</a>
+    </nav>
+  </header>
+
+  <main class="pt-24 max-w-4xl mx-auto px-6">
+
+    <!-- Home Section -->
+    <section id="home" class="text-center py-16">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-indigo-700">Hi, I'm Jayachandra</h1>
+      <p class="text-lg md:text-xl text-gray-600 max-w-xl mx-auto">A passionate Frontend Developer building modern and responsive web applications.</p>
+      <a href="#projects" class="inline-block mt-8 bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-700 transition">View Projects</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 border-t border-gray-200">
+      <h2 class="text-3xl font-bold mb-6 text-indigo-700">About Me</h2>
+      <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8 max-w-3xl">
+        <div class="w-40 h-40 flex-shrink-0 relative rounded-full overflow-hidden shadow-lg cursor-pointer clickable-profile-image">
+          <img id="profile-image" 
+               src="https://i.ibb.co/nNhr3Y9r/hero-headshot-web.jpg" 
+               alt="Profile picture of Jayachandra"
+               class="w-full h-full object-cover"
+               title="Click to upload a new photo" />
+          <input type="file" id="photo-upload" accept="image/*" aria-label="Upload profile photo" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" />
+        </div>
+        <p class="text-gray-700">
+          I am a fresher Frontend Developer with strong enthusiasm for creating beautiful and functional websites. I have worked on several small projects during my studies and personal learning journey. I am eager to apply my skills in HTML, CSS, JavaScript, and Tailwind CSS to real-world projects and continue to grow as a developer.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-12 border-t border-gray-200">
+      <h2 class="text-3xl font-bold mb-6 text-indigo-700">Skills</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-3xl">
+        <div class="p-4 bg-white rounded-lg shadow hover:shadow-lg transition text-center">
+          <h3 class="font-semibold text-lg mb-2">HTML5</h3>
+          <p class="text-gray-600">Semantic markup & accessibility</p>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow hover:shadow-lg transition text-center">
+          <h3 class="font-semibold text-lg mb-2">CSS3</h3>
+          <p class="text-gray-600">Layouts, animations, responsive design</p>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow hover:shadow-lg transition text-center">
+          <h3 class="font-semibold text-lg mb-2">JavaScript</h3>
+          <p class="text-gray-600">DOM manipulation, ES6+ syntax</p>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow hover:shadow-lg transition text-center">
+          <h3 class="font-semibold text-lg mb-2">Tailwind CSS</h3>
+          <p class="text-gray-600">Utility-first CSS framework</p>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow hover:shadow-lg transition text-center">
+          <h3 class="font-semibold text-lg mb-2">Git</h3>
+          <p class="text-gray-600">Version control & collaboration</p>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow hover:shadow-lg transition text-center">
+          <h3 class="font-semibold text-lg mb-2">React</h3>
+          <p class="text-gray-600">Build user interfaces (UIs) for web and mobile applications.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-12 border-t border-gray-200">
+      <h2 class="text-3xl font-bold mb-6 text-indigo-700">Education</h2>
+      <div class="space-y-6 max-w-3xl">
+        <div>
+          <h3 class="text-xl font-semibold">Bachelor of Eletronics And Communication Engineering</h3>
+          <p class="text-gray-700">Veltech University - 2020 to 2024</p>
+          <p class="text-gray-600">Graduated with Honors, focusing on web development and software engineering.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold">High School Diploma</h3>
+          <p class="text-gray-700">Sri Chaitanya Jr College - 2018 to 2020</p>
+          <p class="text-gray-600">Graduated with distinction in science stream.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-12 border-t border-gray-200">
+      <h2 class="text-3xl font-bold mb-6 text-indigo-700">Certifications</h2>
+      <ul class="list-disc list-inside space-y-3 max-w-3xl text-gray-700">
+        <li>
+          <strong>Html Certification</strong> - Great Learning (2023)
+        </li>
+        <li>
+          <strong>JavaScript Certification</strong> - Scalar (2025)
+        </li>
+        <li>
+          <strong>CSS From Scratch</strong> - Udemy (2023)
+        </li>
+      </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-12 border-t border-gray-200">
+      <h2 class="text-3xl font-bold mb-6 text-indigo-700">Projects</h2>
+      <div class="space-y-6 max-w-3xl">
+        <article class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Personal Portfolio Website</h3>
+          <p class="text-gray-700 mb-3">A responsive portfolio website built using HTML, CSS, Tailwind CSS, and JavaScript showcasing my projects and skills.</p>
+          <a href="https://github.com/jayachandra" target="_blank" rel="noopener" class="text-indigo-600 hover:underline font-medium">View on GitHub</a>
+        </article>
+        <article class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">24 hr Story</h3>
+          <p class="text-gray-700 mb-3">This project is a React-based Stories Component inspired by features found in social media platforms like Instagram and WhatsApp. The component allows users to upload and view stories with modal functionality, progress bars, and image transitions using SwiperJS.</p>
+          <a href="https://github.com/jaya200228/24-hr-Story.git" target="_blank" rel="noopener" class="text-indigo-600 hover:underline font-medium">View on GitHub</a>
+        </article>
+        <article class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Weather Web App</h3>
+          <p class="text-gray-700 mb-3"> In this project you are required to build a weather app that displays the current weather details based on the location entered by the user. We will be leveraging a common weather API to achieve this.</p>
+          <a href="https://github.com/jaya200228/Weather-Web-Ap.git" target="_blank" rel="noopener" class="text-indigo-600 hover:underline font-medium">View on GitHub</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 border-t border-gray-200">
+      <h2 class="text-3xl font-bold mb-6 text-indigo-700">Contact Me</h2>
+      <p class="mb-6 text-gray-700 max-w-3xl">Feel free to reach out for job opportunities or collaboration. You can contact me through the following ways:</p>
+      <ul class="max-w-3xl space-y-3 text-gray-700">
+        <li><strong>Email:</strong> <a href="mailto:jayachandra.aldapati@gmail.com" class="text-indigo-600 hover:underline">jayachandra.aldapati@gmail.com</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jaya-chandra-702ba425a/" target="_blank" rel="noopener" class="text-indigo-600 hover:underline">linkedin.com/in/jayachandra</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/jaya200228" target="_blank" rel="noopener" class="text-indigo-600 hover:underline">github.com/jayachandra</a></li>
+      </ul>
+
+      <form id="contact-form" class="mt-8 max-w-3xl bg-white p-6 rounded-lg shadow-md" novalidate>
+        <div class="mb-4">
+          <label for="name" class="block font-semibold mb-1">Name</label>
+          <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-indigo-600" placeholder="Your name" required />
+          <p class="text-red-600 text-sm mt-1 hidden" id="name-error">Please enter your name.</p>
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block font-semibold mb-1">Email</label>
+          <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-indigo-600" placeholder="you@example.com" required />
+          <p class="text-red-600 text-sm mt-1 hidden" id="email-error">Please enter a valid email address.</p>
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block font-semibold mb-1">Message</label>
+          <textarea id="message" name="message" rows="4" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-indigo-600" placeholder="Your message" required></textarea>
+          <p class="text-red-600 text-sm mt-1 hidden" id="message-error">Please enter your message.</p>
+        </div>
+        <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition font-semibold">Send Message</button>
+        <p id="form-success" class="text-green-600 font-semibold mt-4 hidden">Thank you for your message! I will get back to you soon.</p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="text-center py-8 text-gray-600 border-t border-gray-200 mt-12 max-w-4xl mx-auto">
+    &copy; 2024 Jayachandra. All rights reserved.
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Simple form validation and simulated submission
+    const form = document.getElementById('contact-form');
+    const nameInput = form.name;
+    const emailInput = form.email;
+    const messageInput = form.message;
+
+    const nameError = document.getElementById('name-error');
+    const emailError = document.getElementById('email-error');
+    const messageError = document.getElementById('message-error');
+    const formSuccess = document.getElementById('form-success');
+
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      let valid = true;
+
+      nameError.classList.add('hidden');
+      emailError.classList.add('hidden');
+      messageError.classList.add('hidden');
+      formSuccess.classList.add('hidden');
+
+      if (!nameInput.value.trim()) {
+        nameError.classList.remove('hidden');
+        valid = false;
+      }
+
+      if (!emailInput.value.trim() || !validateEmail(emailInput.value.trim())) {
+        emailError.classList.remove('hidden');
+        valid = false;
+      }
+
+      if (!messageInput.value.trim()) {
+        messageError.classList.remove('hidden');
+        valid = false;
+      }
+
+      if (!valid) return;
+
+      formSuccess.classList.remove('hidden');
+      form.reset();
+    });
+
+    // Profile photo upload & preview
+    const photoUpload = document.getElementById('photo-upload');
+    const profileImage = document.getElementById('profile-image');
+
+    profileImage.addEventListener('click', () => {
+      photoUpload.click();
+    });
+
+    photoUpload.addEventListener('change', (event) => {
+      const file = event.target.files[0];
+      if (!file) {
+        profileImage.src = 'https://i.ibb.co/nNhr3Y9r/hero-headshot-web.jpg';
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        profileImage.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+  </script>
+</body>
+</html>
